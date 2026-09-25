@@ -1526,7 +1526,7 @@ class CompactTeamTracker extends LitElement {
       </div>
       <div class="ultra-info">
       ${s === 'PRE'
-        ? html`<span class="ultra-main-text">${shortDateStr}</span><span class="ultra-subtext ${kickoffInfo.isLiveTimer ? 'live-timer' : ''}">${kickoffInfo.isLiveTimer ? kickoffInfo.str : (kickoffInfo.str || timeStr)}</span>`
+        ? html`<span class="ultra-main-text">${shortDateStr}</span><span class="ultra-subtext ${kickoffInfo.isLiveTimer ? 'live-timer' : ''}">${kickoffInfo.isLiveTimer ? kickoffInfo.str : timeStr}</span>`
         : html`<span class="ultra-score ${s === 'IN' ? 'live-score' : ''} ${hasScoreAlert ? 'score-alert-active' : ''} ${isBlurred ? 'spoiler-blur' : ''}">${t.pos} ${racingPos}</span><div class="ultra-subtext"><span>${s === 'IN' ? (a.clock || 'LIVE') : t.finished}</span></div>`
       }
       </div>
